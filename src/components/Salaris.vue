@@ -1,8 +1,8 @@
 <template>
   <v-container fluid>
     <v-row>
-      <v-col cols="3"></v-col>
-      <v-col cols="6">
+      <v-spacer></v-spacer>
+      <v-col cols="12" lg="6" xl="6">
         <v-row>
           <v-col cols="12">
             <v-text-field label="Bruto salaris" type="number" prefix="SRD" v-model="brutoSalaris"></v-text-field>
@@ -16,7 +16,6 @@
               prefix="SRD"
               :placeholder=" 'test' "
               v-model="nettoSalaris"
-              
               readonly
               filled
             ></v-text-field>
@@ -45,7 +44,7 @@
           </v-col>
         </v-row>
       </v-col>
-      <v-col cols="3"></v-col>
+      <v-spacer></v-spacer>
     </v-row>
   </v-container>
 </template>
