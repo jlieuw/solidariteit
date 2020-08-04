@@ -147,7 +147,7 @@ export default {
       ).toFixed(2);
     },
     verschil() {
-      return this.nettoSalaris - this.nettoSalarissolidariteit;
+      return (this.nettoSalaris - this.nettoSalarissolidariteit).toFixed(2);
     },
   },
 };
