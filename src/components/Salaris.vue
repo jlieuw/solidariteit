@@ -127,7 +127,7 @@ export default {
       );
     },
     nettoSalaris() {
-      return (this.brutoSalaris * 1 - (this.aov + this.loonBelasting)).toFixed(
+      return Math.max((this.brutoSalaris * 1 - (this.aov + this.loonBelasting)), 0).toFixed(
         2
       );
     },
@@ -141,9 +141,9 @@ export default {
     },
     nettoSalarissolidariteit() {
       return (
-        this.brutoSalaris * 1 -
+        Math.max(this.brutoSalaris * 1 -
         (this.aov + this.loonBelastingsoldariteit)
-      ).toFixed(2);
+      ), 0).toFixed(2);
     },
     verschil() {
       return this.nettoSalaris - this.nettoSalarissolidariteit;
@@ -151,22 +151,3 @@ export default {
   },
 };
 </script>
-				// //calculating the loonbelasting
-				// var loonbelasting = disc1 * disk1;
-				// schijf1.innerHTML = fm(loonbelasting.toFixed(2));
-				// if( belast > disc2 ){
-				// 	loonbelasting += disk2 * (disc2-disc1); // +118.76 if he earns more than disc2
-				// 	schijf2.innerHTML = fm((disk2*(disc2-disc1)).toFixed(2));
-				// 	if(belast > disc3){
-				// 		loonbelasting += disk3 * (disc3-disc2); // +254.80 if he earns more than disc3
-				// 		schijf3.innerHTML = fm((disk3 * (disc3-disc2)).toFixed(2));
-				// 		loonbelasting += disk4 * (belast - disc3);
-				// 		schijf4.innerHTML = fm((disk4*(belast-disc3)).toFixed(2)); // ++
-				// 	}else{
-				// 		loonbelasting += disk3 * (belast - disc2);
-				// 		schijf3.innerHTML = fm((disk3*(belast-disc2)).toFixed(2));
-				// 	}
-				// }else{
-				// 	loonbelasting += disk2 * (belast - disc1);
-				// 	schijf2.innerHTML = fm((disk2 * (belast - disc1)).toFixed(2));
-				// }
