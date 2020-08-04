@@ -127,7 +127,7 @@ export default {
       );
     },
     nettoSalaris() {
-      return Math.max((this.brutoSalaris * 1 - (this.aov + this.loonBelasting)), 0).toFixed(
+      return Math.max(this.brutoSalaris * 1 - (this.aov + this.loonBelasting), 0).toFixed(
         2
       );
     },
@@ -140,10 +140,10 @@ export default {
       );
     },
     nettoSalarissolidariteit() {
-      return (
+      return 
         Math.max(this.brutoSalaris * 1 -
         (this.aov + this.loonBelastingsoldariteit)
-      ), 0).toFixed(2);
+      , 0).toFixed(2);
     },
     verschil() {
       return this.nettoSalaris - this.nettoSalarissolidariteit;
